@@ -193,7 +193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578351021}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.000000059604645, z: 0}
+  m_LocalPosition: {x: 0, y: -0.00000017881393, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -425,11 +425,12 @@ GameObject:
   m_Component:
   - component: {fileID: 46874192002331745}
   - component: {fileID: 46874192002331744}
-  - component: {fileID: 8025832962431809827}
+  - component: {fileID: 8818013936066453816}
   - component: {fileID: 8396926498928420176}
   - component: {fileID: 4870265581883457405}
   - component: {fileID: 3074467351645001333}
   - component: {fileID: 8143841565038801380}
+  - component: {fileID: 3291258306535415252}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -463,21 +464,21 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46874192002331678}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!58 &8025832962431809827
-CircleCollider2D:
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!70 &8818013936066453816
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -489,9 +490,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0026976466, y: 0.12786645}
-  serializedVersion: 2
-  m_Radius: 0.47552007
+  m_Offset: {x: -0.0022257566, y: 0.14912075}
+  m_Size: {x: 0.9673947, y: 0.9673947}
+  m_Direction: 0
 --- !u!114 &8396926498928420176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,6 +574,17 @@ MonoBehaviour:
   - ActionState: 4
     Duration: 0.5
     TempColor: {r: 0, g: 0.16816235, b: 1, a: 1}
+--- !u!210 &3291258306535415252
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46874192002331678}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &657308031375748193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,6 +2081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4396f8108172cb54d80d84fa99f8a690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _slots: []
 --- !u!1 &7038869648152854023
 GameObject:
   m_ObjectHideFlags: 0
