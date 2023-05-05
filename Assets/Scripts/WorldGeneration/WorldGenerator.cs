@@ -36,6 +36,7 @@ public class WorldGenerator : MonoBehaviour
             {
                 float distance = float.MaxValue;
                 int value = 0;
+                float perlinValue = PerlinNoise.GenerateBiomeNoise(x, y, 12, 4, 0.1f, 2.2f);
 
                 for(int i = 0; i < regionAmount; i++)
                 {
@@ -46,7 +47,35 @@ public class WorldGenerator : MonoBehaviour
                     }
                 }
 
-                pixelColors[x + y * size] = regionColors[value % regionColorAmount];
+                int closestRegionIndex = 0;
+                float distanceRegion = float.MaxValue;
+                for(int i = 0; i < regionAmount; i++)
+                {
+                    if(i != value)
+                    {
+                        if(Vector2.Distance(new Vector2(x, y), points[i]) < distanceRegion)
+                        {
+                            distanceRegion = Vector2.Distance(new Vector2(x, y), points[i]);
+                            closestRegionIndex = i;
+                        }
+                    }
+                }
+
+                if(distanceRegion - distance < value)
+                {
+                    if(perlinValue < 0.5f)
+                    {
+                        pixelColors[x + y * size] = regionColors[value % regionColorAmount];
+                    }
+                    else
+                    {
+                        pixelColors[x + y * size] = regionColors[closestRegionIndex % regionColorAmount];
+                    }
+                }
+                else
+                {
+                    pixelColors[x + y * size] = regionColors[value % regionColorAmount];
+                }
             }
         }
 
@@ -55,5 +84,32 @@ public class WorldGenerator : MonoBehaviour
         myTexture.Apply();
 
         GetComponent<Renderer>().material.mainTexture = myTexture;
+    }
+}
+
+public static class PerlinNoise
+{
+    public static float GenerateBiomeNoise(int x, int y, float scale, int octaves, float persistance, float lacunarity)
+    {
+        float perlinValue = new float();
+        float amplitude = 1;
+        float frequency = 1;
+        float noiseHeight = 1;
+
+        for(int i = 0; i < octaves; i++)
+        {
+            float posX = x/scale * frequency;
+            float posY = y/scale * frequency;
+
+            perlinValue = Mathf.PerlinNoise(posX, posY) * 2 -1;
+            noiseHeight += perlinValue * amplitude;
+            amplitude *= persistance;
+            frequency *= lacunarity;
+        } 
+
+        perlinValue = noiseHeight;
+        perlinValue = Mathf.InverseLerp(-0.5f, 2f, perlinValue);
+        
+        return perlinValue;
     }
 }
