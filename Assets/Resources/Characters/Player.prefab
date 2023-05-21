@@ -979,6 +979,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1061677012343267181}
+  - component: {fileID: 5021696921328215654}
   m_Layer: 0
   m_Name: HUD
   m_TagString: Untagged
@@ -1002,6 +1003,25 @@ Transform:
   m_Father: {fileID: 46874192002331745}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5021696921328215654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018449320314600072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a3feddddbaad04593ffff0889c1ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clockText: {fileID: 1457472312725573204}
+  _daysText: {fileID: 8495733042364025949}
+  _seasonText: {fileID: 681930841314768151}
+  _healthSlider: {fileID: 403355830850964188}
+  _healthPercentText: {fileID: 5598580015494088698}
+  _staminaSlider: {fileID: 6621559948379586321}
+  _staminaPercentText: {fileID: 4229815873758992982}
 --- !u!1 &3016052261994511347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,7 +1034,7 @@ GameObject:
   - component: {fileID: 6163639863586447661}
   - component: {fileID: 4229815873758992982}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: StaminaPercentText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1620,7 +1640,7 @@ GameObject:
   - component: {fileID: 3898385564394818403}
   - component: {fileID: 5598580015494088698}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: HealthPercentText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
