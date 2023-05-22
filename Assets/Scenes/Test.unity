@@ -318,11 +318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e57ea22f335aaa44b1b60372c819092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 1024
-  regionAmount: 128
-  regionColorAmount: 3
-  scale: 100
-  octaves: 8
-  persistance: 0.6
-  lacunarity: 2.5
+  worldSize: 1024
+  regionAmount: 40
   biomeSettings: {fileID: 11400000, guid: 76fe9b47023e5bb4c881f68b6678a9f0, type: 2}
