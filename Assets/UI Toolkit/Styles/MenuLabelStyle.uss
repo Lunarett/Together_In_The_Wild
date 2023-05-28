@@ -1,0 +1,10 @@
+.menu-title {
+    font-size: 75px;
+    -unity-font: url('project://database/Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/Jura-Medium-LB.ttf?fileID=12800000&guid=4a4df204c321f9c40b0dbfb1baaffb4c&type=3#Jura-Medium-LB');
+    -unity-font-style: bold;
+    color: rgba(255, 169, 0, 255);
+    -unity-text-outline-width: 4px;
+    -unity-text-outline-color: rgb(108, 56, 0);
+    -unity-text-align: upper-center;
+    white-space: normal;
+}

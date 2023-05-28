@@ -1,0 +1,42 @@
+.menu-button {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -unity-font-style: bold;
+    font-size: 45px;
+    -unity-text-align: middle-center;
+    color: rgba(255, 255, 255, 255);
+    -unity-font: url('project://database/Assets/Photon/PhotonChat/Demos/DemoChat/Files/Jura-Medium.ttf?fileID=12800000&guid=5abfb0a229c98b3499cffa6c59c2ffb4&type=3#Jura-Medium');
+    border-left-color: rgb(255, 144, 0);
+    border-right-color: rgb(255, 144, 0);
+    border-top-color: rgb(255, 144, 0);
+    border-bottom-color: rgb(255, 144, 0);
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: rgba(77, 52, 25, 255);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menu-button:hover {
+    background-color: rgb(74, 48, 13);
+    color: rgba(255, 205, 0, 255);
+}
+
+.menu-button:active {
+    background-color: rgb(65, 45, 23);
+    border-left-color: rgb(123, 69, 0);
+    border-right-color: rgb(123, 69, 0);
+    border-top-color: rgb(123, 69, 0);
+    border-bottom-color: rgb(123, 69, 0);
+    color: rgba(144, 116, 0, 255);
+}
